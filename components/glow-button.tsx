@@ -13,12 +13,12 @@ const GlowButton = ({
   return (
     <button
       className={cn(
-        "hover:opacity-90 rounded-2xl border font-light relative overflow-hidden",
-        "after:absolute after:content-[''] after:inset-0 after:[box-shadow:0_0_15px_-1px_#ffffff90_inset] after:rounded-2xl",
+        "hover:opacity-85 rounded-2xl border font-normal relative overflow-hidden tracking-wide",
+        "after:absolute after:content-[''] after:inset-0 after:[box-shadow:0_0_12px_-2px_rgba(255,255,255,0.6)_inset] after:rounded-2xl",
         "before:absolute before:content-[''] before:inset-0 before:rounded-2xl before:z-20 after:z-10",
-        "[box-shadow:0_0_100px_-10px_#8B5CF6] before:[box-shadow:0_0_7px_-1px_#e9d5ff_inset]",
-        "bg-violet-500 border-violet-300/70 text-white px-8 text-lg opacity-90",
-        "transition-all duration-300",
+        "[box-shadow:0_0_60px_-8px_rgba(139,92,246,0.6)] before:[box-shadow:0_0_5px_-1px_rgba(233,213,255,0.4)_inset]",
+        "bg-violet-500/90 border-violet-300/50 text-white px-8 text-base",
+        "transition-all duration-500 hover:shadow-[0_0_80px_-5px_rgba(139,92,246,0.8)]",
         className,
       )}
       {...props}
