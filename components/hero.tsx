@@ -1,21 +1,17 @@
-"use client"
-import { Inter } from "next/font/google"
-import { Instrument_Serif as InstrumentSerif } from "next/font/google"
-import { Button } from "@/components/ui/button"
-import GlowButton from "./glow-button"
+"use client";
+import { GeistSans } from "geist/font/sans";
+import { Instrument_Serif as InstrumentSerif } from "next/font/google";
+import { Button } from "@/components/ui/button";
+import GlowButton from "./glow-button";
 
 // Fonts
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-})
 
 const instrumentSerif = InstrumentSerif({
   subsets: ["latin"],
   style: ["italic"],
   weight: "400",
   display: "swap",
-})
+});
 
 export default function Hero() {
   return (
@@ -52,13 +48,17 @@ export default function Hero() {
       <header className="relative z-20 w-full">
         <nav className="container mx-auto px-6 py-6">
           <div className="flex items-center justify-between">
-            <div className={`${inter.className} text-xl font-normal text-white tracking-normal`}>Serenity</div>
+            <div
+              className={`${GeistSans.className} text-xl font-normal text-white tracking-normal`}
+            >
+              Serenity
+            </div>
             <div className="hidden md:flex items-center space-x-8">
               {["About", "Gallery", "Contact"].map((item) => (
                 <a
                   key={item}
                   href="#"
-                  className={`${inter.className} text-sm text-white/80 hover:text-white transition-colors font-normal tracking-wide`}
+                  className={`${GeistSans.className} text-sm text-white/80 hover:text-white transition-colors font-normal tracking-wide`}
                 >
                   {item}
                 </a>
@@ -73,27 +73,37 @@ export default function Hero() {
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto text-center space-y-8 py-16">
             <h1
-              className={`${inter.className} text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-normal text-white leading-tight max-w-4xl mx-auto`}
+              className={`${GeistSans.className} text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-normal text-white leading-tight max-w-4xl mx-auto`}
             >
-              <span className="tracking-tightest" style={{ letterSpacing: '-0.3rem' }}>Discover the beauty of</span>{" "}
-              <span className={`${instrumentSerif.className} italic font-normal text-purple-200/95`}>
+              <span
+                className="tracking-tightest"
+                style={{ letterSpacing: "-0.3rem" }}
+              >
+                Discover the beauty of
+              </span>{" "}
+              <span
+                className={`${instrumentSerif.className} italic font-normal text-purple-200/95`}
+              >
                 Natural Serenity
               </span>
             </h1>
-            <p className={`${inter.className} text-xl md:text-2xl text-white/75 max-w-3xl mx-auto leading-relaxed font-light tracking-wide`}
-              style={{ letterSpacing: '-0.04rem' }}
+            <p
+              className={`${GeistSans.className} text-xl md:text-2xl text-white/75 max-w-3xl mx-auto leading-relaxed font-light tracking-wide`}
+              style={{ letterSpacing: "-0.04rem" }}
             >
-            
-              Immerse yourself in tranquil landscapes that inspire peace and creativity. Connect with nature's gentle
-              embrace through moments of pure tranquility.
+              Immerse yourself in tranquil landscapes that inspire peace and
+              creativity. Connect with nature's gentle embrace through moments
+              of pure tranquility.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 pt-10">
-              <GlowButton className="px-10 py-2 text-base">Explore Now</GlowButton>
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-6 pt-6">
+              <GlowButton className="px-12 py-3 text-base">
+                Explore Now
+              </GlowButton>
               <Button
                 variant="outline"
-                className="hover:opacity-80 rounded-2xl border font-normal relative overflow-hidden border-white/25 text-white/90 bg-black/20 backdrop-blur-md px-10 py-5 text-base transition-all duration-500 hover:bg-white/5 hover:border-white/40 tracking-wide shadow-lg"
+                className="hover:opacity-80 rounded-2xl border font-normal relative overflow-hidden border-white/25 text-white/90 bg-black/20 backdrop-blur-md px-12 py-6 text-base transition-all duration-500 hover:bg-white/5 hover:border-white/40 tracking-wide shadow-lg"
                 onClick={() => {
-                  console.log('Learn More clicked')
+                  console.log("Learn More clicked");
                   // Add navigation or modal functionality here
                 }}
               >
@@ -104,5 +114,5 @@ export default function Hero() {
         </div>
       </div>
     </section>
-  )
+  );
 }
